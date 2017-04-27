@@ -1,0 +1,38 @@
+{
+  "name": "@fibjs/sync",
+  "version": "1.0.0",
+  "description": "Synchronize all kinds of async function, make the world peace and quiet!",
+  "main": "lib/sync.js",
+  "scripts": {
+    "test": "fibjs test/test.js",
+    "ci": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/sync.git"
+  },
+  "keywords": [
+    "sync",
+    "promise",
+    "generator",
+    "callback",
+    "async",
+    "await",
+    "fibjs"
+  ],
+  "author": "ngot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/sync/issues"
+  },
+  "homepage": "https://github.com/fibjs-modules/sync#readme",
+  "ci": {
+    "type": "travis"
+  },
+  "devDependencies": {
+    "@fibjs/ci": "^1.0.0"
+  },
+  "dependencies": {
+    "co": "^4.6.0"
+  }
+}
