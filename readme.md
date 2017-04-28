@@ -20,7 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/@fibjs/sync.svg?style=flat-square
 [download-url]: https://npmjs.org/package/@fibjs/sync
 
-Synchronize all kinds of async function, make the world peace and quiet!
+Synchronize all kinds of async look like function to readl non-blocking sync function, make the world peace and quiet!
 
 ## Install
 
@@ -34,27 +34,37 @@ $ npm i @fibjs/sync --save
 const sync = require('@fibjs/sync');
 
 function cb(callback) {
-  callback(null, 'this is cb');
+  callback(null, 'this is callback');
 }
 
 function pr() {
   return new Promise((resovle, reject) => {
-    resovle('this is pr');
+    resovle('this is promise');
   });
 }
 
 function* ge() {
-  return 'this is ge';
+  return 'this is generator';
 }
 
 async function aa() {
-  return 'this is aa';
+  return 'this is async function';
 }
 
-const newCb = sync.cb(cb);
-const newPr = sync.pr(pr);
-const newGe = sync.ge(ge);
-const newAa = sync.aa(aa);
+// sync default to callback hanlder
+const callbackSync = sync(cb);
+
+try {
+  const result = callbackSync();
+} catch(e) {
+  // handle the error
+}
+
+// the other apis
+const newCb = sync.cb(cb);// callback
+const newPr = sync.pr(pr);// promise
+const newGe = sync.ge(ge);// generator
+const newAa = sync.aa(aa);// async function
 
 ```
 

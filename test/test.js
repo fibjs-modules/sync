@@ -10,7 +10,9 @@ describe("sync", () => {
       function cb(callback) {
         callback(null, 'this is cb');
       }
-      const newCb = sync.cb(cb);
+      let newCb = sync.cb(cb);
+      assert(newCb() === 'this is cb');
+      newCb = sync(cb);
       assert(newCb() === 'this is cb');
     });
 
@@ -18,7 +20,9 @@ describe("sync", () => {
       function cb(callback) {
         callback(new Error('this is cb error!'));
       }
-      const newCb = sync.cb(cb);
+      let newCb = sync.cb(cb);
+      assert.throws(newCb, 'should throw error');
+      newCb = sync(cb);
       assert.throws(newCb, 'should throw error');
     });
   });

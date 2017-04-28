@@ -1,7 +1,7 @@
 {
   "name": "@fibjs/sync",
   "version": "1.0.1",
-  "description": "Synchronize all kinds of async function, make the world peace and quiet!",
+  "description": "Synchronize all kinds of async look like function to readl non-blocking sync function, make the world peace and quiet!",
   "main": "lib/sync.js",
   "scripts": {
     "test": "fibjs test/test.js",
