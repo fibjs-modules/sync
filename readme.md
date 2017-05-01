@@ -20,7 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/@fibjs/sync.svg?style=flat-square
 [download-url]: https://npmjs.org/package/@fibjs/sync
 
-Synchronize all kinds of async look like function to real non-blocking sync function, make the world peace and quiet!
+Synchronize all kinds of async look like function to original non-blocking sync one, make the world peace and quiet!
 
 ## Install
 
@@ -65,7 +65,6 @@ const newCb = sync.cb(cb);// callback
 const newPr = sync.pr(pr);// promise
 const newGe = sync.ge(ge);// generator
 const newAa = sync.aa(aa);// async function
-
 ```
 
 Now you can use `newCb`,`newPr`,`newGe`,`newAa` as a normal sync function and use try/catch to handle the error.
