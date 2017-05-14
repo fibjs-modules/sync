@@ -27,10 +27,11 @@
   },
   "homepage": "https://github.com/fibjs-modules/sync#readme",
   "ci": {
-    "type": "travis"
+    "type": "travis, appveyor",
+    "version": "0.3.0"
   },
   "devDependencies": {
-    "@fibjs/ci": "^1.0.0"
+    "@fibjs/ci": "^1.1.2"
   },
   "dependencies": {
     "co": "^4.6.0"
